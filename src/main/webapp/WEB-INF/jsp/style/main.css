@@ -1,0 +1,84 @@
+*{
+	box-sizing : border-box;
+}
+
+body{
+	min-height: 80vh;	
+}
+
+header{
+	background-color: #9f9f9f;
+}
+
+.navUl{
+	margin : 5px 200px;
+	display:flex;
+	justify-content: center;
+}
+
+.navUl li{
+	padding: 20px;
+	text-decoration: none;
+}
+
+h1{
+	padding:25px;
+	text-align : center;
+}
+
+.formSection{
+	display:flex;
+	justify-content : center;
+	align-items : center;
+}
+
+
+.formSection label{
+	display: block;
+}
+
+
+.cardSection{
+
+	display:flex;
+	justify-content : center;
+	align-items : center;
+	flex-wrap: wrap;
+}
+
+.formRegistrazione{
+	display: flex;
+	justify-content : center;
+	align-items : center;
+	flex-wrap: wrap;
+}
+
+.formRegistrazione .form-item{
+	flex: 1 0 30%;
+}
+
+.formRegistrazione .form-button{
+ 	flex: 1 0 100%;
+}
+
+.errorSection{
+	text-align: center;
+}
+
+
+.card{
+	
+	margin:50px;
+	padding : 40px;
+	flex : 0 0 25%;
+	text-align : center;
+	background-color: #9f9f9f;
+	height: 100%;
+	
+}
+
+footer{
+	background-color: #9f9f9f;
+	text-align: center;
+	padding: 20px;
+}
