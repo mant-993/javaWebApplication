@@ -2,6 +2,8 @@ package com.wapp.filter;
 
 import java.io.IOException;
 
+import com.wapp.bean.Utente;
+
 import jakarta.servlet.Filter;
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
@@ -20,7 +22,14 @@ public class LoginFilter implements Filter{
 		HttpServletResponse res = (HttpServletResponse) response;
 		
 		System.out.println(req.getRequestURI());
-		chain.doFilter(request, response);
+		
+		Utente user = (Utente)req.getSession().getAttribute("user");
+		if(user!=null) {
+			chain.doFilter(request, response);
+		}else {
+			String appPath = req.getContextPath();
+			res.sendRedirect(appPath+"/");
+		}
 		
 	}
 
